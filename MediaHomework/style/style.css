@@ -1,0 +1,263 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #e0dcd7;
+}
+header {
+    padding-top: 10px;
+    margin: 0;
+    border-bottom: 2px solid red;
+    height: 60px;
+}
+.top_products{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: auto; 
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.card{
+    height: 200px;
+    width: 250px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.first{
+    background: url("../images/man-holding-gift-with-christmas-tree-background_1123160-8491.jpg");
+    background-position: center;   
+    background-repeat: no-repeat;   
+    background-size: cover;  
+}
+.second{
+    background:url("../images/glowing-christmas-lights-white-background-flat-lay-top-view_479776-5714.jpg.avif");
+    background-position: center;   
+    background-repeat: no-repeat;   
+    background-size: cover;         
+}
+.third{
+    background: url(../images/shutterstock_1161255541.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.label>span{
+    white-space: nowrap;   
+}
+.label{
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    background-color: rgb(225, 43, 43);
+    border-radius: 5px;
+    bottom: 10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.burger_button {
+    display: none; 
+}
+.burger_checkbox {
+    display: none; 
+}
+.burger_ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+}
+.burger_ul > li {
+    cursor: pointer;
+    white-space: nowrap;
+}
+.burger_ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.card_container{
+    border: 1px solid #e0e0e0;
+    height: 380px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card_photo{
+    margin-top: 2px;
+    width: 80%;
+    height: 70%;
+    position: relative;
+}
+.photo{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+}
+.sale {
+    position: absolute;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Градиент */
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.card_grid{
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: auto; 
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.price>span{
+    text-decoration: line-through;
+    padding-left: 5px;
+    color: rgba(128, 128, 128, 0.784);
+    font-weight: normal;
+}
+.describtion {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.describtion>span{
+    color: rgba(128, 128, 128, 0.625);
+}
+ .reiting::before{
+    content: ' \2605';
+    color: #ffcc00;
+    padding-right: 1px;
+ }
+  .reiting::after{
+    content: ' 3995 оценок';
+    color: rgba(128, 128, 128, 0.784);
+    padding-left: 5px;
+ }
+ .time_delivery>span{
+    color: rgba(128, 128, 128, 0.784);
+ }
+.card_text {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 90%; 
+}
+ .price{
+    font-weight: 300px;
+    font-size: 17px;
+    font-weight: bold;
+ }
+ .card_container:hover{
+    top: -10px;
+    transform: scale(1.05);
+    transition-duration: .2s;
+    cursor: pointer;
+ }
+@media screen and (max-width: 1320px) {
+    .burger_ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: red;
+        width: 250px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .burger_ul>li {
+        padding-left: 10px;
+    }
+    .burger_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid black;
+        background: #fff;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .burger_button_line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: #333;
+        margin: 2px;
+        position: relative;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+   
+    .burger_checkbox:checked ~ .burger_ul {
+        display: flex;
+    }
+
+ 
+    .burger_checkbox:checked + .burger_button .burger_button_line:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+
+    .burger_checkbox:checked + .burger_button .burger_button_line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger_checkbox:checked + .burger_button .burger_button_line:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -6px;
+    }
+    .card_grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top_products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card_container:hover{
+        transform: scale(1.03);
+        transition-duration: .2s;
+    }
+    
+}
