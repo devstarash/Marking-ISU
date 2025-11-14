@@ -119,7 +119,7 @@ header {
 .sale {
     position: absolute;
     border-radius: 6px;
-    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Градиент */
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
     top: 10px;
     left: 10px;
     color: white;
